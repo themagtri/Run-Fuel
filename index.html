@@ -144,10 +144,10 @@ details p{margin:8px 0 0;color:var(--mut)}
     <div id="gt" style="color:var(--mut)"></div>
     <div class="ex" id="gx"></div>
   </div>
-  <div class="facts">
-    <div><b>35 גרם</b> בשעה: הצריכה הממוצעת של רצי מרתון בסביליה. רוב הרצים רחוקים מהיעד.</div>
-    <div><b class="pct">2.1%+</b> מהר יותר בריצה עם הידרוג׳ל לעומת תמיסה רגילה (90 גרם בשעה).</div>
-    <div><b class="pct">60%−</b> תסמיני עיכול אחרי שבועיים של אימון מעי בריצה.</div>
+  <div hidden>
+    
+    
+    
   </div>
   <button class="main" onclick="go('plan')">ואיך מגיעים לזה בהדרגה?</button>
 </section>
@@ -235,7 +235,7 @@ $("#km").oninput=$("#pm1").oninput=$("#ps1").oninput=calc;calc();
 const imp=g=>g>=78?4.7:g<=9?g/9:1+(g-9)*3.7/69;
 function why(){
  const g=+$("#gs").value,x=imp(g);
- $("#gso").textContent=g+" גרם";$("#gv").textContent="≈ "+x.toFixed(1)+"%";$("#gb").style.width=x/4.7*100+"%";const T=Math.round(42.195*270),sv=Math.round(T*x/100),f2=s=>Math.floor(s/60)+":"+pad(s%60),f3=s=>Math.floor(s/3600)+":"+pad(Math.floor(s%3600/60))+":"+pad(s%60);$("#gx").innerHTML=`<b class="th">דוגמה: מרתון בקצב 4:30</b><b class="pct">${x.toFixed(1)}%</b> שיפור הם <b>${f2(sv)} דקות</b> מהיר יותר: מ-${f3(T)} ל-${f3(T-sv)}.<small>המחשה בלבד: השיפור נמדד במבחן זמן ברכיבה אחרי שעתיים, לא במרתון.</small>`;
+ $("#gso").textContent=g+" גרם";$("#gv").textContent="≈ "+x.toFixed(1)+"%";$("#gb").style.width=x/4.7*100+"%";const f1=s=>Math.floor(s/3600)+":"+pad(Math.floor(s%3600/60)),f2=s=>Math.floor(s/60)+":"+pad(s%60),f3=s=>Math.floor(s/3600)+":"+pad(Math.floor(s%3600/60))+":"+pad(s%60);$("#gx").innerHTML='<b class="th">דוגמה: מרתון</b>'+[10800,12600].map(T=>{const sv=Math.round(T*x/100);return `<div><b>ב-${f1(T)}</b>: <b class="pct">${x.toFixed(1)}%</b> שיפור הם <b>${f2(sv)} דקות</b> מהר יותר, ל-${f3(T-sv)}</div>`}).join("");
  $("#gt").textContent=g<20?"מעט מדי. ב-10 גרם בשעה 4 מתוך 8 רוכבים מאומנים לא סיימו 3 שעות."
  :g<=78?"קירוב קווי בין שתי נקודות שדווחו במחקר רכיבה (Smith 2013): 1% ב-9 גרם ו-4.7% ב-78. בפועל העקומה מתיישרת בהדרגה."
  :"מעל 78 התשואה פוחתת, ובמחקר 2026 גם 150 לא שיפר יכולת מעבר ל-90 עד 120. תלוי במעי."}
