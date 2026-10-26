@@ -6,9 +6,9 @@
 <title>דלק לריצה – כמה פחמימה לאכול באימון</title>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f5f7fa;--card:#fff;--ink:#0f172a;--mut:#5b6778;--line:#e2e8f0;--blue:#1d4ed8;--bluein:#fff;--soft:#e8f0fe;--bib:#f59e0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e131a;--card:#151b24;--ink:#e6eaf0;--mut:#93a0b3;--line:#242e3b;--blue:#6aa8ff;--bluein:#08111f;--soft:#172538}}
-:root[data-theme="dark"]{--bg:#0e131a;--card:#151b24;--ink:#e6eaf0;--mut:#93a0b3;--line:#242e3b;--blue:#6aa8ff;--bluein:#08111f;--soft:#172538}
+:root{--bg:#eef1f6;--card:#fff;--ink:#0a1020;--mut:#4a5568;--line:#cfd7e4;--blue:#1738d8;--bluein:#fff;--soft:#e3eaff;--bib:#f59e0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d}}
+:root[data-theme="dark"]{--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Heebo,system-ui,"Segoe UI",Arial,sans-serif}
@@ -19,13 +19,13 @@ h2{font-size:26px;line-height:1.15;font-weight:800;margin:6px 0}
 button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .back{background:none;border:0;color:var(--mut);font-weight:600;padding:6px 0}
-.bib{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06)}
+.bib{background:var(--card);color:var(--ink);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:16px;padding:20px;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06)}
 .bib b{display:block;font-size:64px;line-height:1;font-weight:800;color:var(--blue)}
 .bib span{font-weight:700;font-size:17px}.bib small{display:block;font-weight:500;color:var(--mut)}
 .main{display:block;width:100%;background:var(--blue);color:var(--bluein);border:0;border-radius:14px;padding:16px 20px;text-align:right;font-weight:700;font-size:18px}
 .main small{display:block;font-weight:400;opacity:.85;font-size:14px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.alt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:right;font-weight:700;line-height:1.25}
+.alt{background:transparent;border:1px solid var(--line);border-radius:12px;padding:11px 14px;text-align:right;font-weight:700;font-size:15px;line-height:1.25}
 .alt small{display:block;font-weight:400;color:var(--mut);margin-top:4px;font-size:14px}
 .alt:hover{border-color:var(--blue)}.main:hover{filter:brightness(1.07)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
@@ -60,14 +60,18 @@ details p{margin:8px 0 0;color:var(--mut)}
 .pc{display:flex;align-items:center;gap:4px;direction:ltr}.pc b{font-size:24px}
 .tt{display:flex;justify-content:space-between;align-items:baseline;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;margin:6px 0 16px}
 .tt b{font-size:30px;font-weight:800;color:var(--blue);direction:ltr}
-.pr{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:6px}
+.pr{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px;margin-bottom:5px}
 .pr small{display:block;color:var(--mut);font-size:13px;line-height:1.3}
-.pr .g{font-size:24px;font-weight:800;color:var(--blue);text-align:center;line-height:1}.pr .g small{font-size:11px;font-weight:500}
+.pr .g{font-size:20px;font-weight:800;color:var(--blue);text-align:center;line-height:1}.pr .g small{font-size:11px;font-weight:500}
 .tl{margin:18px 4px 0 0;padding-right:20px;border-right:2px solid var(--line)}
 .tl>div{position:relative;margin-bottom:14px}
 .tl>div:before{content:"";position:absolute;right:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);border:3px solid var(--bg)}
 .tl .pre:before{background:var(--bib)}.tl .post:before{background:var(--mut)}
 .tl b{display:block}.tl small{display:block;color:var(--mut);line-height:1.35}
+.cta{display:flex;align-items:center;justify-content:space-between;padding:24px 22px;font-size:26px;font-weight:800;border-radius:16px;box-shadow:0 10px 24px -8px var(--blue)}
+.cta small{font-size:15px;font-weight:500;margin-top:2px}.cta i{font-style:normal;font-size:32px;line-height:1}
+.h3{font-size:15px;font-weight:700;color:var(--mut);margin:36px 0 2px}.s2{font-size:13px;margin-bottom:8px}
+.seg.sm{max-width:200px}.seg.sm button{padding:5px;font-size:13px}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -77,14 +81,14 @@ details p{margin:8px 0 0;color:var(--mut)}
 <section id="v-home">
   <h1>דלק לריצה</h1>
   <p class="sub">כמה פחמימה לאכול באימון ובמרוץ. בלי חפירות, עם מחקרים.</p>
-  <button class="main" onclick="go('calc')">חשב כמה לאכול<small>מרחק וקצב. זמן והמלצה מיד.</small></button>
+  <button class="main cta" onclick="go('calc')"><span>חשב כמה לאכול<small>מרחק וקצב. זמן והמלצה מיד.</small></span><i>←</i></button>
   <div class="two">
     <button class="alt" onclick="go('why')">למה זה עובד<small>הפיזיולוגיה והמחקרים</small></button>
     <button class="alt" onclick="go('plan')">איך מעלים בהדרגה<small>מהיום ועד היעד שלך</small></button>
   </div>
-  <h2 style="margin-top:34px">מה אפשר לצרוך</h2>
-  <p class="sub" style="margin-bottom:12px">ג׳לים ומשקאות, וכמה פחמימה בכל אחד.</p>
-  <div class="seg" id="ft"></div><div id="fl"></div>
+  <h3 class="h3">מה אפשר לצרוך</h3>
+  <p class="sub s2">ג׳לים ומשקאות, וכמה פחמימה בכל אחד.</p>
+  <div class="seg sm" id="ft"></div><div id="fl"></div>
   <p class="fine" style="margin-top:10px">רק מוצרים שנמצאו בחנויות ובאתרי יבואנים ישראליים (Sponser Israel, פרוראנר, אמין אופניים, פודיום; אוקטובר 2026). כמויות הפחמימה של Sponser מחושבות מהערכים ל-100 גרם. מחירים משוערים ומשתנים. Maurten ומשקאות SiS Beta Fuel לא נמצאו בארץ ולכן אינם ברשימה.</p>
 </section>
 
