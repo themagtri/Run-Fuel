@@ -168,7 +168,7 @@ long:"הריצה הארוכה היא כיתת האימון של המעי. תרג
 int:"קח בחימום או במנוחות, לא בתוך הקטע המהיר. מנות קטנות.",
 fart:"לגימות קטנות בקטעים הקלים. לא ג׳ל מיד לפני קטע מהיר.",
 tempo:"קצב מרוץ: חזור על אותם מוצרים ותזמון של יום המרוץ.",
-race:"ביום המרוץ משתמשים רק במה שתורגל. ג׳ל אחד 10–15 דקות לפני הזינוק, ובלי ג׳ל ב-15 הדקות האחרונות."};
+race:"ביום המרוץ משתמשים רק במה שתורגל באימונים."};
 function need(t,D){
  if(S.mode==="r")return D<=45?[0,0]:D<=75?[0,30]:D<=120?[45,60]:D<=150?[60,75]:[80,90];
  if(t==="easy")return D<=75?[0,0]:D<=90?[0,30]:D<=150?[30,60]:[45,75];
@@ -202,14 +202,14 @@ function calc(){
  let h;
  if(!today)h=`<b class="n">0</b><span>גרם לשעה: מים בלבד</span><small>${r?"באירוע קצר כזה":"בעצימות ובמשך כאלה"} המאגרים מספיקים.</small>`;
  else{
-  const gp=GEL[S.g],n=Math.max(1,Math.round(today*D/60/gp.g)),a=D<=75?10:15,b=Math.max(a,D-15),ts=Array.from({length:n},(_,i)=>Math.round(Math.min(b,Math.max(a,(i+.5)*D/n))/5)*5);
+  const gp=GEL[S.g],n=Math.max(1,Math.round(today*D/60/gp.g)),a=D<=75?10:15,b=Math.max(a,D-20),ts=Array.from({length:n},(_,i)=>{const x=Math.round(Math.min(b,Math.max(a,(i+.5)*D/n))/5)*5;return x>b?x-5:x});
   
   const tot=n*gp.g;tl(r,D,pace,ts,gp);
   h=`<b class="n">${today}</b><span>גרם פחמימה לשעה</span><small>${goal>today?`היעד המלא ל${r?"מרוץ":"אימון"} הזה: ${goal}. מגיעים אליו בהדרגה.`:`טווח מומלץ: ${lo}–${hi}`}</small>
   <div class="st"><div>${tot}<small>גרם סה״כ</small></div><div>${tot*4}<small>קק״ל</small></div><div>${ts.length}<small>${gp.s}</small></div></div>
   <small>בפועל כ-${Math.round(ts.length*gp.g*60/D)} גרם לשעה עם ${gp.n}</small>`}
  $("#out").innerHTML=h;if(!today)$("#tl").innerHTML="";
- $("#tip").textContent=TIP[r?"race":S.t]+(today?" בחילה או התכווצויות? רד 10 גרם לשעה והישאר שם שבוע.":"");
+ $("#tip").textContent=TIP[r?"race":S.t]+(today&&!r?" בחילה או התכווצויות? רד 10 גרם לשעה והישאר שם שבוע.":"");
  if(goal){G.today=today;G.goal=goal}
  const b=$("#tgo");b.hidden=!(goal>today);b.textContent=`איך מעלים בהדרגה ל-${goal} גרם`}
 seg();chips("#ct",T,"t");chips("#cl",L,"l");chips("#cg",GL,"g");
