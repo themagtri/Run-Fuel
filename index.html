@@ -6,61 +6,73 @@
 <title>דלק לריצה – כמה פחמימה לאכול באימון</title>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef1f6;--card:#fff;--ink:#0a1020;--mut:#4a5568;--line:#cfd7e4;--blue:#1738d8;--bluein:#fff;--soft:#e3eaff;--y:#9a7200;--g:#15803d;--bib:#f59e0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d;--y:#ffd24a;--g:#4ade80}}
-:root[data-theme="dark"]{--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d;--y:#ffd24a;--g:#4ade80}
+:root{--bg:#f1f2f3;--card:#fff;--ink:#1a1c1e;--mut:#6a7078;--line:#e2e4e7;--blue:#007cc3;--bluein:#fff;--soft:#e5f2fa;--sel:#fff;--bib:#f59e0b;--y:#9a7200;--g:#15803d;--sh:0 1px 2px rgba(0,0,0,.1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--card:#1c1d1f;--ink:#fff;--mut:#9ea4ac;--line:#2e3033;--blue:#31b4f2;--bluein:#00131f;--soft:#0b2331;--sel:#45484d;--y:#ffd24a;--g:#4ade80;--sh:none}}
+:root[data-theme="dark"]{--bg:#000;--card:#1c1d1f;--ink:#fff;--mut:#9ea4ac;--line:#2e3033;--blue:#31b4f2;--bluein:#00131f;--soft:#0b2331;--sel:#45484d;--y:#ffd24a;--g:#4ade80;--sh:none}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Heebo,system-ui,"Segoe UI",Arial,sans-serif}
-.w{max-width:620px;margin:0 auto;padding:20px 16px 40px}
-h1{font-size:clamp(38px,11vw,54px);line-height:1.05;font-weight:800;margin:12px 0 6px;letter-spacing:-.01em}
-h2{font-size:26px;line-height:1.15;font-weight:800;margin:6px 0}
-.sub{color:var(--mut);margin:0 0 20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Heebo,system-ui,"Segoe UI",Arial,sans-serif}
+.top{display:flex;align-items:center;gap:10px;background:#101214;color:#fff;padding:13px 16px;border-bottom:3px solid var(--blue)}
+.top b{font-size:18px;font-weight:800}
+.lg{display:block;width:22px;height:22px;border-radius:50%;border:4px solid var(--blue);border-left-color:transparent}
+.w{max-width:620px;margin:0 auto;padding:18px 16px 40px}
+h2{font-size:24px;line-height:1.2;font-weight:800;margin:4px 0}
+.sub{color:var(--mut);margin:0 0 18px}
 button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.back{background:none;border:0;color:var(--mut);font-weight:600;padding:6px 0}
-.bib{background:var(--card);color:var(--ink);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:16px;padding:20px;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06)}
-.bib b{display:block;font-size:64px;line-height:1;font-weight:800;color:var(--blue)}
-.bib span{font-weight:700;font-size:17px}.bib small{display:block;font-weight:500;color:var(--mut)}
-.main{display:block;width:100%;background:var(--blue);color:var(--bluein);border:0;border-radius:14px;padding:16px 20px;text-align:right;font-weight:700;font-size:18px}
-.main small{display:block;font-weight:400;opacity:.85;font-size:14px}
+.back{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:0;box-shadow:var(--sh);border-radius:999px;padding:8px 16px;color:var(--ink);font-weight:700;margin-bottom:12px}
+.back::before{content:"→";color:var(--blue)}
+.bib{background:var(--card);border-radius:14px;padding:18px;text-align:center;box-shadow:var(--sh)}
+.bib b{display:block;font-size:56px;line-height:1;font-weight:800;color:var(--blue)}
+.bib span{font-weight:700}.bib small{display:block;color:var(--mut);font-weight:500}
+.res{margin-top:10px}.res b.n{font-size:64px}
+.ring{width:176px;height:176px;border-radius:50%;margin:2px auto 12px;display:grid;place-items:center;background:conic-gradient(var(--blue) calc(var(--p)*1%),var(--line) 0)}
+.ring>div{width:146px;height:146px;border-radius:50%;background:var(--card);display:grid;place-content:center;text-align:center}
+.ring b.n{font-size:52px}.ring span{font-size:14px;color:var(--mut);font-weight:600}
+.main{display:block;width:100%;background:var(--blue);color:var(--bluein);border:0;border-radius:12px;padding:16px 20px;text-align:right;font-weight:700;font-size:18px}
+.main small{display:block;font-weight:400;opacity:.9;font-size:14px}
+.cta{display:flex;align-items:center;justify-content:space-between;padding:24px 22px;font-size:26px;font-weight:800;background:linear-gradient(135deg,#007cc3,#18a7e8);color:#fff;box-shadow:0 8px 20px -8px #007cc3}
+.cta small{font-size:15px;font-weight:500;margin-top:2px}.cta i{font-style:normal;font-size:32px;line-height:1}
+.main:hover{filter:brightness(1.07)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.alt{background:transparent;border:1px solid var(--line);border-radius:12px;padding:11px 14px;text-align:right;font-weight:700;font-size:15px;line-height:1.25}
-.alt small{display:block;font-weight:400;color:var(--mut);margin-top:4px;font-size:14px}
-.alt:hover{border-color:var(--blue)}.main:hover{filter:brightness(1.07)}
+.alt{background:var(--card);border:0;box-shadow:var(--sh);border-radius:12px;padding:14px;text-align:right;font-weight:700;font-size:15px;line-height:1.25}
+.alt::before{content:"";display:block;width:26px;height:4px;border-radius:2px;background:var(--c,var(--blue));margin-bottom:10px}
+.two .alt:nth-child(1){--c:#a78bfa}.two .alt:nth-child(2){--c:#34d399}
+.alt small{display:block;font-weight:400;color:var(--mut);margin-top:4px;font-size:13px}
+.alt:hover{outline:2px solid var(--blue)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 14px;font-weight:600;color:var(--mut)}
-.chip[aria-pressed=true]{background:var(--soft);border-color:var(--blue);color:var(--blue)}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 15px;font-weight:600;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:var(--bluein)}
 .l{display:flex;justify-content:space-between;font-weight:700;margin-top:4px}.l output{color:var(--blue);font-weight:800}
 input[type=range]{width:100%;accent-color:var(--blue);margin:6px 0 16px}
-.res{margin-top:10px}.res b.n{font-size:72px}
-.st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0 8px;padding-top:14px;border-top:1px solid var(--line);font-weight:800;font-size:22px;line-height:1.1}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 10px;font-weight:800;font-size:22px;line-height:1.1}
+.st div{background:var(--bg);border-radius:10px;padding:10px 4px}
 .st small{display:block;font-weight:500;font-size:13px;color:var(--mut)}
-.tip{background:var(--card);border:1px solid var(--line);border-right:4px solid var(--blue);padding:12px 14px;margin:14px 0 0;border-radius:10px}
-details{border-bottom:1px solid var(--line);padding:12px 0}
-summary{font-weight:700;font-size:18px;cursor:pointer}
+.tip{background:var(--card);box-shadow:var(--sh);border-right:4px solid var(--blue);padding:12px 14px;margin:14px 0 0;border-radius:10px}
+details{background:var(--card);box-shadow:var(--sh);border-radius:12px;padding:14px 16px;margin-bottom:8px}
+summary{font-weight:700;font-size:18px;cursor:pointer;color:var(--y)}
 details p{margin:8px 0 0;color:var(--mut)}
-.sl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:20px 0}
-.sl .v{font-size:48px;font-weight:800;line-height:1;color:var(--blue)}
+.sl{background:var(--card);box-shadow:var(--sh);border-radius:14px;padding:16px;margin:16px 0}
+.sl .v{font-size:48px;font-weight:800;line-height:1;color:var(--g)}
 .trk{height:8px;border-radius:9px;background:var(--line);overflow:hidden;margin:10px 0}
-.trk u{display:block;height:100%;background:var(--blue);transition:width .2s}
-.facts{display:grid;gap:10px;margin:14px 0}
-.facts div{border-right:3px solid var(--blue);padding:2px 12px}.facts b{font-size:20px;font-weight:800}
-.step{display:grid;grid-template-columns:90px 1fr 56px;gap:10px;align-items:center;width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:6px;text-align:right}
-.step[aria-pressed=true]{border-color:var(--blue);background:var(--soft)}
+.trk u{display:block;height:100%;background:var(--g);transition:width .2s}
+.facts{display:grid;gap:8px;margin:14px 0}
+.facts div{background:var(--card);box-shadow:var(--sh);border-radius:12px;padding:12px 14px}.facts b{font-size:20px;font-weight:800}
+.step{display:grid;grid-template-columns:90px 1fr 56px;gap:10px;align-items:center;width:100%;background:var(--card);box-shadow:var(--sh);border:0;border-radius:10px;padding:11px 12px;margin-bottom:6px;text-align:right}
+.step[aria-pressed=true]{outline:2px solid var(--blue)}
 .step i{display:block;height:8px;border-radius:9px;background:var(--line);overflow:hidden}.step u{display:block;height:100%;background:var(--blue)}
-.rules{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.rules span{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:5px 11px;font-size:14px;color:var(--mut)}
+.rules{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.rules span{background:var(--card);box-shadow:var(--sh);border-radius:999px;padding:5px 12px;font-size:14px;color:var(--mut)}
 .fine{color:var(--mut);font-size:13px;margin-top:28px}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px;margin:4px 0 14px}
-.seg button{border:0;background:none;padding:10px;font-weight:700;border-radius:9px;color:var(--mut)}
-.seg button[aria-pressed=true]{background:var(--blue);color:var(--bluein)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:var(--line);border-radius:999px;padding:3px;margin:4px 0 14px}
+.seg button{border:0;background:none;padding:9px;font-weight:700;border-radius:999px;color:var(--mut)}
+.seg button[aria-pressed=true]{background:var(--sel);color:var(--blue);box-shadow:var(--sh)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 12px}
 .row label{font-weight:700;display:block;margin-bottom:4px}
-.row input{width:100%;font:inherit;font-size:22px;font-weight:700;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.row input{width:100%;font:inherit;font-size:22px;font-weight:700;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
 .pc{display:flex;align-items:center;gap:4px;direction:ltr}.pc b{font-size:24px}
-.tt{display:flex;justify-content:space-between;align-items:baseline;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;margin:6px 0 16px}
+.tt{display:flex;justify-content:space-between;align-items:baseline;background:var(--card);box-shadow:var(--sh);border-radius:12px;padding:12px 16px;margin:6px 0 16px}
 .tt b{font-size:30px;font-weight:800;color:var(--blue);direction:ltr}
-.pr{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px;margin-bottom:5px}
+.pr{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--card);box-shadow:var(--sh);border-radius:10px;padding:8px 12px;margin-bottom:5px}
 .pr small{display:block;color:var(--mut);font-size:13px;line-height:1.3}
 .pr .g{font-size:20px;font-weight:800;color:var(--blue);text-align:center;line-height:1}.pr .g small{font-size:11px;font-weight:500}
 .tl{margin:18px 4px 0 0;padding-right:20px;border-right:2px solid var(--line)}
@@ -68,25 +80,21 @@ details p{margin:8px 0 0;color:var(--mut)}
 .tl>div:before{content:"";position:absolute;right:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);border:3px solid var(--bg)}
 .tl .pre:before{background:var(--bib)}.tl .post:before{background:var(--mut)}
 .tl b{display:block}.tl small{display:block;color:var(--mut);line-height:1.35}
-.cta{display:flex;align-items:center;justify-content:space-between;padding:24px 22px;font-size:26px;font-weight:800;border-radius:16px;box-shadow:0 10px 24px -8px var(--blue)}
-.cta small{font-size:15px;font-weight:500;margin-top:2px}.cta i{font-style:normal;font-size:32px;line-height:1}
-.h3{font-size:15px;font-weight:700;color:var(--mut);margin:36px 0 2px}.s2{font-size:13px;margin-bottom:8px}
-.seg.sm{max-width:200px}.seg.sm button{padding:5px;font-size:13px}
-summary{color:var(--y)}
 .th{display:block;color:var(--y);font-weight:800;margin-bottom:2px}
-.pct{color:var(--g)}.sl .v{color:var(--g)}
-.ex{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:12px}
+.pct{color:var(--g)}
+.ex{background:var(--soft);border-radius:12px;padding:12px 14px;margin-top:12px}
 .ex small{display:block;color:var(--mut);margin-top:4px;font-size:13px}
-.back{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 16px;color:var(--ink);font-weight:700;margin-bottom:10px}
-.back::before{content:"→"}.back:hover{border-color:var(--blue)}
+.h3{font-size:15px;font-weight:700;color:var(--mut);margin:30px 0 2px}.s2{font-size:13px;margin-bottom:8px}
+.seg.sm{max-width:200px}.seg.sm button{padding:5px;font-size:13px}
 [hidden]{display:none!important}
 </style>
 </head>
 <body>
+<header class="top"><i class="lg"></i><b>דלק לריצה</b></header>
 <div class="w">
 
 <section id="v-home">
-  <h1>דלק לריצה</h1>
+  
   <p class="sub">כמה פחמימה לאכול באימון ובמרוץ. בלי חפירות, עם מחקרים.</p>
   <button class="main cta" onclick="go('calc')"><span>חשב כמה לאכול<small>מרחק וקצב. זמן והמלצה מיד.</small></span><i>←</i></button>
   <div class="two">
@@ -214,7 +222,7 @@ function calc(){
   const gp=GEL[S.g],n=Math.max(1,Math.round(today*D/60/gp.g)),a=D<=75?10:15,b=Math.max(a,D-20),ts=Array.from({length:n},(_,i)=>{const x=Math.round(Math.min(b,Math.max(a,(i+.5)*D/n))/5)*5;return x>b?x-5:x});
   
   const tot=n*gp.g;tl(r,D,pace,ts,gp);
-  h=`<b class="n">${today}</b><span>גרם פחמימה לשעה</span><small>${goal>today?`היעד המלא ל${r?"מרוץ":"אימון"} הזה: ${goal}. מגיעים אליו בהדרגה.`:`טווח מומלץ: ${lo}–${hi}`}</small>
+  h=`<div class="ring" style="--p:${Math.round(today/(goal||today)*100)}"><div><b class="n">${today}</b><span>גרם לשעה</span></div></div><small>${goal>today?`היעד המלא ל${r?"מרוץ":"אימון"} הזה: ${goal}. מגיעים אליו בהדרגה.`:`טווח מומלץ: ${lo}–${hi}`}</small>
   <div class="st"><div>${tot}<small>גרם סה״כ</small></div><div>${tot*4}<small>קק״ל</small></div><div>${ts.length}<small>${gp.s}</small></div></div>
   <small>בפועל כ-${Math.round(ts.length*gp.g*60/D)} גרם לשעה עם ${gp.n}</small>`}
  $("#out").innerHTML=h;if(!today)$("#tl").innerHTML="";
