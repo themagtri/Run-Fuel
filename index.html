@@ -6,9 +6,9 @@
 <title>דלק לריצה – כמה פחמימה לאכול באימון</title>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef1f6;--card:#fff;--ink:#0a1020;--mut:#4a5568;--line:#cfd7e4;--blue:#1738d8;--bluein:#fff;--soft:#e3eaff;--bib:#f59e0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d}}
-:root[data-theme="dark"]{--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d}
+:root{--bg:#eef1f6;--card:#fff;--ink:#0a1020;--mut:#4a5568;--line:#cfd7e4;--blue:#1738d8;--bluein:#fff;--soft:#e3eaff;--y:#9a7200;--g:#15803d;--bib:#f59e0b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d;--y:#ffd24a;--g:#4ade80}}
+:root[data-theme="dark"]{--bg:#080c14;--card:#111826;--ink:#f4f7fb;--mut:#a9b6ca;--line:#2b384d;--blue:#5b9bff;--bluein:#03101f;--soft:#14233d;--y:#ffd24a;--g:#4ade80}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Heebo,system-ui,"Segoe UI",Arial,sans-serif}
@@ -72,6 +72,13 @@ details p{margin:8px 0 0;color:var(--mut)}
 .cta small{font-size:15px;font-weight:500;margin-top:2px}.cta i{font-style:normal;font-size:32px;line-height:1}
 .h3{font-size:15px;font-weight:700;color:var(--mut);margin:36px 0 2px}.s2{font-size:13px;margin-bottom:8px}
 .seg.sm{max-width:200px}.seg.sm button{padding:5px;font-size:13px}
+summary{color:var(--y)}
+.th{display:block;color:var(--y);font-weight:800;margin-bottom:2px}
+.pct{color:var(--g)}.sl .v{color:var(--g)}
+.ex{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:12px}
+.ex small{display:block;color:var(--mut);margin-top:4px;font-size:13px}
+.back{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 16px;color:var(--ink);font-weight:700;margin-bottom:10px}
+.back::before{content:"→"}.back:hover{border-color:var(--blue)}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -118,19 +125,21 @@ details p{margin:8px 0 0;color:var(--mut)}
   <p class="sub">לא רק כדי לא להיתקל ב״קיר״. ארבע סיבות, לחץ לפתיחה.</p>
   <details open><summary>1. המאגרים נגמרים</summary><p>הגוף אוגר כ-1,500–2,500 קק״ל פחמימה. מרתון שורף כ-2,800–3,000 קק״ל לרץ של 70 ק״ג, בכל מהירות (הערכה). את הפער לא סוגרים בשתייה, אבל אפשר לסגור חלק גדול ממנו.</p></details>
   <details><summary>2. הסוכר בדם נופל</summary><p>במחקר של 2026, רוכבים מאומנים שקיבלו רק 10 גרם בשעה חוו ירידה חדה בסוכר, ו-4 מתוך 8 לא סיימו 3 שעות. עם 90 ו-120 גרם כולם סיימו.</p></details>
-  <details><summary>3. דלק חיצוני נשרף בשריר</summary><p>גלוקוז לבדו נספג עד כ-60 גרם בשעה. גלוקוז ופרוקטוז יחד מגיעים ל-90 ויותר, ובמחקר רכיבה הם היו מהירים ב-8% מגלוקוז בלבד.</p></details>
+  <details><summary>3. דלק חיצוני נשרף בשריר</summary><p>גלוקוז לבדו נספג עד כ-60 גרם בשעה. גלוקוז ופרוקטוז יחד מגיעים ל-90 ויותר, ובמחקר רכיבה הם היו מהירים ב-<b class="pct">8%</b> מגלוקוז בלבד.</p></details>
   <details><summary>4. פחות נזק והתאוששות מהירה</summary><p>ברצי שטח עילית, 120 גרם בשעה הפחיתו סמני נזק שרירי ושיפרו יכולת ריצה עצימה יום אחרי, לעומת 60 ו-90.</p></details>
   <div class="sl">
+    <b class="th">כמה זה משפר ביצועים?</b>
     <label class="l" for="gs">גרם פחמימה בשעה <output id="gso"></output></label>
     <input id="gs" type="range" min="0" max="120" step="1" value="60">
     <div class="v" id="gv"></div>
     <div class="trk"><u id="gb"></u></div>
     <div id="gt" style="color:var(--mut)"></div>
+    <div class="ex" id="gx"></div>
   </div>
   <div class="facts">
     <div><b>35 גרם</b> בשעה: הצריכה הממוצעת של רצי מרתון בסביליה. רוב הרצים רחוקים מהיעד.</div>
-    <div><b>2.1%+</b> מהר יותר בריצה עם הידרוג׳ל לעומת תמיסה רגילה (90 גרם בשעה).</div>
-    <div><b>60%−</b> תסמיני עיכול אחרי שבועיים של אימון מעי בריצה.</div>
+    <div><b class="pct">2.1%+</b> מהר יותר בריצה עם הידרוג׳ל לעומת תמיסה רגילה (90 גרם בשעה).</div>
+    <div><b class="pct">60%−</b> תסמיני עיכול אחרי שבועיים של אימון מעי בריצה.</div>
   </div>
   <button class="main" onclick="go('plan')">ואיך מגיעים לזה בהדרגה?</button>
 </section>
@@ -209,7 +218,7 @@ function calc(){
   <div class="st"><div>${tot}<small>גרם סה״כ</small></div><div>${tot*4}<small>קק״ל</small></div><div>${ts.length}<small>${gp.s}</small></div></div>
   <small>בפועל כ-${Math.round(ts.length*gp.g*60/D)} גרם לשעה עם ${gp.n}</small>`}
  $("#out").innerHTML=h;if(!today)$("#tl").innerHTML="";
- $("#tip").textContent=TIP[r?"race":S.t]+(today&&!r?" בחילה או התכווצויות? רד 10 גרם לשעה והישאר שם שבוע.":"");
+ $("#tip").innerHTML='<b class="th">'+(r?"טיפ למרוץ":"טיפ לאימון")+'</b>'+TIP[r?"race":S.t]+(today&&!r?" בחילה או התכווצויות? רד 10 גרם לשעה והישאר שם שבוע.":"");
  if(goal){G.today=today;G.goal=goal}
  const b=$("#tgo");b.hidden=!(goal>today);b.textContent=`איך מעלים בהדרגה ל-${goal} גרם`}
 seg();chips("#ct",T,"t");chips("#cl",L,"l");chips("#cg",GL,"g");
@@ -218,7 +227,7 @@ $("#km").oninput=$("#pm1").oninput=$("#ps1").oninput=calc;calc();
 const imp=g=>g>=78?4.7:g<=9?g/9:1+(g-9)*3.7/69;
 function why(){
  const g=+$("#gs").value,x=imp(g);
- $("#gso").textContent=g+" גרם";$("#gv").textContent="≈ "+x.toFixed(1)+"%";$("#gb").style.width=x/4.7*100+"%";
+ $("#gso").textContent=g+" גרם";$("#gv").textContent="≈ "+x.toFixed(1)+"%";$("#gb").style.width=x/4.7*100+"%";const T=Math.round(42.195*270),sv=Math.round(T*x/100),f2=s=>Math.floor(s/60)+":"+pad(s%60),f3=s=>Math.floor(s/3600)+":"+pad(Math.floor(s%3600/60))+":"+pad(s%60);$("#gx").innerHTML=`<b class="th">דוגמה: מרתון בקצב 4:30</b><b class="pct">${x.toFixed(1)}%</b> שיפור הם <b>${f2(sv)} דקות</b> מהיר יותר: מ-${f3(T)} ל-${f3(T-sv)}.<small>המחשה בלבד: השיפור נמדד במבחן זמן ברכיבה אחרי שעתיים, לא במרתון.</small>`;
  $("#gt").textContent=g<20?"מעט מדי. ב-10 גרם בשעה 4 מתוך 8 רוכבים מאומנים לא סיימו 3 שעות."
  :g<=78?"קירוב קווי בין שתי נקודות שדווחו במחקר רכיבה (Smith 2013): 1% ב-9 גרם ו-4.7% ב-78. בפועל העקומה מתיישרת בהדרגה."
  :"מעל 78 התשואה פוחתת, ובמחקר 2026 גם 150 לא שיפר יכולת מעבר ל-90 עד 120. תלוי במעי."}
@@ -234,7 +243,7 @@ function plan(){
  ps=Math.min(ps,st.length-1);
  $("#lad").innerHTML=st.map((v,i)=>`<button class="step" aria-pressed="${ps===i}" data-i="${i}"><span>שלב ${i+1}</span><i><u style="width:${v/120*100}%"></u></i><b>${v}</b></button>`).join("");
  const v=st[ps],pv=ps?st[ps-1]:a;
- $("#sd").textContent=(ps===0?"הוסף 1–2 ריצות ״מעי״ קלות של 45–60 דקות עם הכמות הזו, ושאר הצריכה בריצות הארוכות. ":"ממשיכים עם אותו מוצר ועולים רק אחרי 2 אימונים רצופים בלי תסמינים. ")
+ $("#sd").innerHTML='<b class="th">שלב '+(ps+1)+': '+v+' גרם לשעה</b>'+(ps===0?"הוסף 1–2 ריצות ״מעי״ קלות של 45–60 דקות עם הכמות הזו, ושאר הצריכה בריצות הארוכות. ":"ממשיכים עם אותו מוצר ועולים רק אחרי 2 אימונים רצופים בלי תסמינים. ")
  +(v>60&&pv<=60?"מעל 60 עוברים לג׳ל או משקה עם גלוקוז ופרוקטוז, למשל SiS Beta Fuel. ":"")
  +(ps===st.length-1?"זה היעד: חזור עליו בשתי ריצות בקצב מרוץ לפחות, ובטייפר בלי מוצרים חדשים.":"")}
 $("#pt").oninput=$("#pg").oninput=()=>{ps=0;plan()};
